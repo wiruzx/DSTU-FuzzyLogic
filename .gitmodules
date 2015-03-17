@@ -1,0 +1,3 @@
+[submodule "submodules/FSLineChart"]
+	path = submodules/FSLineChart
+	url = https://github.com/ArthurGuibert/FSLineChart.git
