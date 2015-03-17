@@ -88,6 +88,8 @@
 		E6326B541AB8D7F1002BEBF2 /* LICENSE.txt in Resources */ = {isa = PBXBuildFile; fileRef = E6326B481AB8D7F1002BEBF2 /* LICENSE.txt */; };
 		E6326B561AB8D870002BEBF2 /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = E6326B551AB8D870002BEBF2 /* libsqlite3.dylib */; };
 		E6326B631AB8D8F6002BEBF2 /* PureFutures.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E6326B5E1AB8D8E7002BEBF2 /* PureFutures.framework */; };
+		E6326B6A1AB8DA41002BEBF2 /* StudentsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6326B691AB8DA41002BEBF2 /* StudentsManager.swift */; };
+		E6326B6D1AB8DA69002BEBF2 /* Student.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6326B6C1AB8DA69002BEBF2 /* Student.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -294,6 +296,8 @@
 		E6326B551AB8D870002BEBF2 /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
 		E6326B581AB8D8E7002BEBF2 /* PureFutures.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = PureFutures.xcodeproj; path = submodules/PureFutures/PureFutures.xcodeproj; sourceTree = SOURCE_ROOT; };
 		E6326B671AB8D94E002BEBF2 /* FuzzyLogic-BridgingHeader.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.objc; path = "FuzzyLogic-BridgingHeader.h"; sourceTree = "<group>"; };
+		E6326B691AB8DA41002BEBF2 /* StudentsManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StudentsManager.swift; sourceTree = "<group>"; };
+		E6326B6C1AB8DA69002BEBF2 /* Student.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Student.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -340,6 +344,7 @@
 				E6326A5C1AB8D42E002BEBF2 /* External */,
 				E6326A351AB8D0A0002BEBF2 /* AppDelegate.swift */,
 				E6326A371AB8D0A0002BEBF2 /* ViewController.swift */,
+				E6326B6B1AB8DA5B002BEBF2 /* Model */,
 				E6326A391AB8D0A0002BEBF2 /* Main.storyboard */,
 				E6326A3C1AB8D0A0002BEBF2 /* Images.xcassets */,
 				E6326A3E1AB8D0A0002BEBF2 /* LaunchScreen.xib */,
@@ -747,6 +752,15 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
+		E6326B6B1AB8DA5B002BEBF2 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				E6326B6C1AB8DA69002BEBF2 /* Student.swift */,
+				E6326B691AB8DA41002BEBF2 /* StudentsManager.swift */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -893,6 +907,7 @@
 				E6326AFC1AB8D7DA002BEBF2 /* YapDatabaseFullTextSearchTransaction.m in Sources */,
 				E6326B041AB8D7DA002BEBF2 /* YapDatabaseRelationshipTransaction.m in Sources */,
 				E6326B0D1AB8D7DA002BEBF2 /* YapDatabaseSecondaryIndexOptions.m in Sources */,
+				E6326B6D1AB8DA69002BEBF2 /* Student.swift in Sources */,
 				E6326B191AB8D7DA002BEBF2 /* YapDatabaseViewTransaction.m in Sources */,
 				E6326B081AB8D7DA002BEBF2 /* YapDatabaseSearchResultsViewOptions.m in Sources */,
 				E6326B181AB8D7DA002BEBF2 /* YapDatabaseViewOptions.m in Sources */,
@@ -931,6 +946,7 @@
 				E6326B4D1AB8D7F1002BEBF2 /* DDFileLogger.m in Sources */,
 				E6326B4F1AB8D7F1002BEBF2 /* DDTTYLogger.m in Sources */,
 				E6326B011AB8D7DA002BEBF2 /* YapDatabaseRelationshipConnection.m in Sources */,
+				E6326B6A1AB8DA41002BEBF2 /* StudentsManager.swift in Sources */,
 				E6326B241AB8D7DA002BEBF2 /* YapTouch.m in Sources */,
 				E6326B061AB8D7DA002BEBF2 /* YapDatabaseSearchResultsView.m in Sources */,
 				E6326AF51AB8D7DA002BEBF2 /* YapDatabaseFilteredViewConnection.m in Sources */,
