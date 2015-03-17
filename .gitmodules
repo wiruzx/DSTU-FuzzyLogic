@@ -4,3 +4,6 @@
 [submodule "submodules/YapDatabase"]
 	path = submodules/YapDatabase
 	url = https://github.com/yapstudios/YapDatabase.git
+[submodule "submodules/PureFutures"]
+	path = submodules/PureFutures
+	url = https://github.com/wiruzx/PureFutures.git

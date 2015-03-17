@@ -87,6 +87,7 @@
 		E6326B531AB8D7F1002BEBF2 /* README.txt in Resources */ = {isa = PBXBuildFile; fileRef = E6326B471AB8D7F1002BEBF2 /* README.txt */; };
 		E6326B541AB8D7F1002BEBF2 /* LICENSE.txt in Resources */ = {isa = PBXBuildFile; fileRef = E6326B481AB8D7F1002BEBF2 /* LICENSE.txt */; };
 		E6326B561AB8D870002BEBF2 /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = E6326B551AB8D870002BEBF2 /* libsqlite3.dylib */; };
+		E6326B631AB8D8F6002BEBF2 /* PureFutures.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E6326B5E1AB8D8E7002BEBF2 /* PureFutures.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -96,6 +97,27 @@
 			proxyType = 1;
 			remoteGlobalIDString = E6326A2F1AB8D0A0002BEBF2;
 			remoteInfo = FuzzyLogic;
+		};
+		E6326B5D1AB8D8E7002BEBF2 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E6326B581AB8D8E7002BEBF2 /* PureFutures.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = E65E6FBE1A86BF41001B514C;
+			remoteInfo = PureFutures;
+		};
+		E6326B5F1AB8D8E7002BEBF2 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E6326B581AB8D8E7002BEBF2 /* PureFutures.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = E65E6FC91A86BF41001B514C;
+			remoteInfo = PureFuturesTests;
+		};
+		E6326B611AB8D8F1002BEBF2 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E6326B581AB8D8E7002BEBF2 /* PureFutures.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = E65E6FBD1A86BF41001B514C;
+			remoteInfo = PureFutures;
 		};
 /* End PBXContainerItemProxy section */
 
@@ -270,6 +292,7 @@
 		E6326B471AB8D7F1002BEBF2 /* README.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.txt; sourceTree = "<group>"; };
 		E6326B481AB8D7F1002BEBF2 /* LICENSE.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE.txt; sourceTree = "<group>"; };
 		E6326B551AB8D870002BEBF2 /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
+		E6326B581AB8D8E7002BEBF2 /* PureFutures.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = PureFutures.xcodeproj; path = submodules/PureFutures/PureFutures.xcodeproj; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -277,6 +300,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E6326B631AB8D8F6002BEBF2 /* PureFutures.framework in Frameworks */,
 				E6326B561AB8D870002BEBF2 /* libsqlite3.dylib in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -364,6 +388,7 @@
 		E6326A5C1AB8D42E002BEBF2 /* External */ = {
 			isa = PBXGroup;
 			children = (
+				E6326B581AB8D8E7002BEBF2 /* PureFutures.xcodeproj */,
 				E6326A5D1AB8D7DA002BEBF2 /* YapDatabase */,
 				E6326A551AB8D42A002BEBF2 /* FSLineChart */,
 			);
@@ -711,6 +736,15 @@
 			path = ..;
 			sourceTree = "<group>";
 		};
+		E6326B591AB8D8E7002BEBF2 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				E6326B5E1AB8D8E7002BEBF2 /* PureFutures.framework */,
+				E6326B601AB8D8E7002BEBF2 /* PureFuturesTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -725,6 +759,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				E6326B621AB8D8F1002BEBF2 /* PBXTargetDependency */,
 			);
 			name = FuzzyLogic;
 			productName = FuzzyLogic;
@@ -778,6 +813,12 @@
 			mainGroup = E6326A271AB8D0A0002BEBF2;
 			productRefGroup = E6326A311AB8D0A0002BEBF2 /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = E6326B591AB8D8E7002BEBF2 /* Products */;
+					ProjectRef = E6326B581AB8D8E7002BEBF2 /* PureFutures.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				E6326A2F1AB8D0A0002BEBF2 /* FuzzyLogic */,
@@ -785,6 +826,23 @@
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		E6326B5E1AB8D8E7002BEBF2 /* PureFutures.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = PureFutures.framework;
+			remoteRef = E6326B5D1AB8D8E7002BEBF2 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		E6326B601AB8D8E7002BEBF2 /* PureFuturesTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = PureFuturesTests.xctest;
+			remoteRef = E6326B5F1AB8D8E7002BEBF2 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		E6326A2E1AB8D0A0002BEBF2 /* Resources */ = {
@@ -904,6 +962,11 @@
 			isa = PBXTargetDependency;
 			target = E6326A2F1AB8D0A0002BEBF2 /* FuzzyLogic */;
 			targetProxy = E6326A461AB8D0A0002BEBF2 /* PBXContainerItemProxy */;
+		};
+		E6326B621AB8D8F1002BEBF2 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = PureFutures;
+			targetProxy = E6326B611AB8D8F1002BEBF2 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
