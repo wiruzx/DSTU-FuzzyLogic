@@ -90,6 +90,8 @@
 		E6326B631AB8D8F6002BEBF2 /* PureFutures.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E6326B5E1AB8D8E7002BEBF2 /* PureFutures.framework */; };
 		E6326B6A1AB8DA41002BEBF2 /* StudentsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6326B691AB8DA41002BEBF2 /* StudentsManager.swift */; };
 		E6326B6D1AB8DA69002BEBF2 /* Student.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6326B6C1AB8DA69002BEBF2 /* Student.swift */; };
+		E6326B6F1AB8DFF4002BEBF2 /* MasterTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6326B6E1AB8DFF4002BEBF2 /* MasterTableViewController.swift */; };
+		E6326B711AB8E26A002BEBF2 /* StudentListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6326B701AB8E26A002BEBF2 /* StudentListViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -298,6 +300,8 @@
 		E6326B671AB8D94E002BEBF2 /* FuzzyLogic-BridgingHeader.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.objc; path = "FuzzyLogic-BridgingHeader.h"; sourceTree = "<group>"; };
 		E6326B691AB8DA41002BEBF2 /* StudentsManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StudentsManager.swift; sourceTree = "<group>"; };
 		E6326B6C1AB8DA69002BEBF2 /* Student.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Student.swift; sourceTree = "<group>"; };
+		E6326B6E1AB8DFF4002BEBF2 /* MasterTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MasterTableViewController.swift; sourceTree = "<group>"; };
+		E6326B701AB8E26A002BEBF2 /* StudentListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StudentListViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -344,6 +348,8 @@
 				E6326A5C1AB8D42E002BEBF2 /* External */,
 				E6326A351AB8D0A0002BEBF2 /* AppDelegate.swift */,
 				E6326A371AB8D0A0002BEBF2 /* ViewController.swift */,
+				E6326B6E1AB8DFF4002BEBF2 /* MasterTableViewController.swift */,
+				E6326B701AB8E26A002BEBF2 /* StudentListViewController.swift */,
 				E6326B6B1AB8DA5B002BEBF2 /* Model */,
 				E6326A391AB8D0A0002BEBF2 /* Main.storyboard */,
 				E6326A3C1AB8D0A0002BEBF2 /* Images.xcassets */,
@@ -952,6 +958,7 @@
 				E6326AF51AB8D7DA002BEBF2 /* YapDatabaseFilteredViewConnection.m in Sources */,
 				E6326B521AB8D7F1002BEBF2 /* DDMultiFormatter.m in Sources */,
 				E6326B491AB8D7F1002BEBF2 /* CLIColor.m in Sources */,
+				E6326B711AB8E26A002BEBF2 /* StudentListViewController.swift in Sources */,
 				E6326B1E1AB8D7DA002BEBF2 /* YapDatabaseLogging.m in Sources */,
 				E6326B2E1AB8D7DA002BEBF2 /* YapDatabaseTransaction.m in Sources */,
 				E6326AFD1AB8D7DA002BEBF2 /* YapDatabaseExtension.m in Sources */,
@@ -961,6 +968,7 @@
 				E6326B091AB8D7DA002BEBF2 /* YapDatabaseSearchResultsViewTransaction.m in Sources */,
 				E6326AF71AB8D7DA002BEBF2 /* YapDatabaseFilteredViewTypes.m in Sources */,
 				E6326B211AB8D7DA002BEBF2 /* YapMemoryTable.m in Sources */,
+				E6326B6F1AB8DFF4002BEBF2 /* MasterTableViewController.swift in Sources */,
 				E6326B1C1AB8D7DA002BEBF2 /* YapDatabaseConnectionDefaults.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
