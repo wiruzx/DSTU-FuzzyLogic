@@ -293,6 +293,7 @@
 		E6326B481AB8D7F1002BEBF2 /* LICENSE.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE.txt; sourceTree = "<group>"; };
 		E6326B551AB8D870002BEBF2 /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
 		E6326B581AB8D8E7002BEBF2 /* PureFutures.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = PureFutures.xcodeproj; path = submodules/PureFutures/PureFutures.xcodeproj; sourceTree = SOURCE_ROOT; };
+		E6326B671AB8D94E002BEBF2 /* FuzzyLogic-BridgingHeader.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.objc; path = "FuzzyLogic-BridgingHeader.h"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -351,6 +352,7 @@
 		E6326A331AB8D0A0002BEBF2 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				E6326B671AB8D94E002BEBF2 /* FuzzyLogic-BridgingHeader.h */,
 				E6326A341AB8D0A0002BEBF2 /* Info.plist */,
 			);
 			name = "Supporting Files";
@@ -1076,6 +1078,7 @@
 				INFOPLIST_FILE = FuzzyLogic/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "FuzzyLogic/FuzzyLogic-BridgingHeader.h";
 			};
 			name = Debug;
 		};
@@ -1086,6 +1089,7 @@
 				INFOPLIST_FILE = FuzzyLogic/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "FuzzyLogic/FuzzyLogic-BridgingHeader.h";
 			};
 			name = Release;
 		};
