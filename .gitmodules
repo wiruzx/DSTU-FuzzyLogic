@@ -1,3 +1,6 @@
 [submodule "submodules/FSLineChart"]
 	path = submodules/FSLineChart
 	url = https://github.com/ArthurGuibert/FSLineChart.git
+[submodule "submodules/YapDatabase"]
+	path = submodules/YapDatabase
+	url = https://github.com/yapstudios/YapDatabase.git
