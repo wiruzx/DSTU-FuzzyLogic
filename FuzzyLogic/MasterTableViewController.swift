@@ -10,6 +10,10 @@ import UIKit
 
 class MasterTableViewController: UITableViewController {
     
+    // MARK:- Private properties
+    
+    private let studentsManager = StudentsManager(userDefaults: NSUserDefaults.standardUserDefaults())
+    
     // MARK:- Type declaration
     
     private enum Row {
@@ -69,6 +73,7 @@ class MasterTableViewController: UITableViewController {
         case .Some(.List):
             
             let studentListViewController = storyboard?.instantiateViewControllerWithIdentifier("StudentListViewController") as StudentListViewController
+            studentListViewController.studentsManager = studentsManager
             
             splitViewController?.showDetailViewController(studentListViewController, sender: nil)
             

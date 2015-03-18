@@ -16,7 +16,7 @@ class StudentListViewController: UIViewController, UITableViewDataSource {
     
     // MARK:- Public properties
     
-    var studentManager: StudentsManager!
+    var studentsManager: StudentsManager!
     
     // MARK:- Private properties
     
@@ -68,13 +68,11 @@ class StudentListViewController: UIViewController, UITableViewDataSource {
     }
     
     private func reloadStudents() {
-        studentManager
-            .getStrudents { _ in true }
-            .onComplete { self.students = $0 }
+        studentsManager.getAllStudents().onComplete { self.students = $0 }
     }
     
     private func addStudent(name: String, points: Double) {
-        studentManager.addStudent(Student(name: name, points: points))
+        studentsManager.addStudent(Student(name: name, points: points))
     }
     
     // MARK:- Table view data source
