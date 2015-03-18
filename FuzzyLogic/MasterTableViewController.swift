@@ -62,4 +62,22 @@ class MasterTableViewController: UITableViewController {
         return cell
     }
     
+    // MARK:- Table view delegate
+    
+    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        switch Row(fromIndexPath: indexPath) {
+        case .Some(.List):
+            
+            let studentListViewController = storyboard?.instantiateViewControllerWithIdentifier("StudentListViewController") as StudentListViewController
+            
+            splitViewController?.showDetailViewController(studentListViewController, sender: nil)
+            
+        case .Some(.Request):
+            break
+            
+        case .None:
+            break
+        }
+    }
+    
 }
