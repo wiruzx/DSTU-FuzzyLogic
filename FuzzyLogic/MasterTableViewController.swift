@@ -78,7 +78,10 @@ class MasterTableViewController: UITableViewController {
             splitViewController?.showDetailViewController(UINavigationController(rootViewController: studentListViewController), sender: nil)
             
         case .Some(.Request):
-            break
+            
+            let groupSelectViewController = storyboard?.instantiateViewControllerWithIdentifier("GroupSelectViewController") as GroupSelectViewController
+            groupSelectViewController.studentsManager = studentsManager
+            splitViewController?.showDetailViewController(UINavigationController(rootViewController: groupSelectViewController), sender: nil)
             
         case .None:
             break

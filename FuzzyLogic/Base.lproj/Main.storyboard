@@ -5,7 +5,7 @@
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
-        <!--Root View Controller-->
+        <!--Fuzzy Logic-->
         <scene sceneID="WhH-K9-44C">
             <objects>
                 <tableViewController clearsSelectionOnViewWillAppear="NO" id="a8E-9k-4KX" customClass="MasterTableViewController" customModule="FuzzyLogic" customModuleProvider="target" sceneMemberID="viewController">
@@ -19,7 +19,7 @@
                             <outlet property="delegate" destination="a8E-9k-4KX" id="9uE-Qk-tBW"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Root View Controller" id="7hE-k8-qdd"/>
+                    <navigationItem key="navigationItem" title="Fuzzy Logic" id="7hE-k8-qdd"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="EqR-T3-LhU" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -95,10 +95,10 @@
             </objects>
             <point key="canvasLocation" x="1495" y="1651"/>
         </scene>
-        <!--View Controller-->
+        <!--Group Select View Controller-->
         <scene sceneID="hJv-ur-JG5">
             <objects>
-                <viewController id="zwp-Q9-SgX" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="GroupSelectViewController" id="zwp-Q9-SgX" customClass="GroupSelectViewController" customModule="FuzzyLogic" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="mlD-jp-nIf"/>
                         <viewControllerLayoutGuide type="bottom" id="0cD-4K-oQF"/>
@@ -106,8 +106,95 @@
                     <view key="view" contentMode="scaleToFill" id="rbu-GU-Ld3">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="T6y-CZ-y9i">
+                                <rect key="frame" x="165" y="40" width="271" height="29"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="28" id="yw3-bO-PnF"/>
+                                    <constraint firstAttribute="width" constant="271" id="zXi-FC-x9T"/>
+                                </constraints>
+                                <segments>
+                                    <segment title="Five"/>
+                                    <segment title="Four"/>
+                                    <segment title="Three"/>
+                                    <segment title="Two"/>
+                                </segments>
+                                <connections>
+                                    <action selector="segmentControlValueChanged:" destination="zwp-Q9-SgX" eventType="editingChanged" id="3WU-bX-FRd"/>
+                                </connections>
+                            </segmentedControl>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="nKI-pf-o82">
+                                <rect key="frame" x="227" y="91" width="146" height="29"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="28" id="0Ky-67-uQI"/>
+                                    <constraint firstAttribute="width" constant="146" id="eYV-fS-sDl"/>
+                                </constraints>
+                                <segments>
+                                    <segment title="Or"/>
+                                    <segment title="And"/>
+                                </segments>
+                                <connections>
+                                    <action selector="segmentControlValueChanged:" destination="zwp-Q9-SgX" eventType="editingChanged" id="g3d-Kh-VKx"/>
+                                </connections>
+                            </segmentedControl>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="b1l-ow-IbF">
+                                <rect key="frame" x="165" y="140" width="271" height="29"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="28" id="gBG-Tq-fQ5"/>
+                                    <constraint firstAttribute="width" constant="271" id="nIi-lE-hWY"/>
+                                </constraints>
+                                <segments>
+                                    <segment title="Not Five"/>
+                                    <segment title="Not Four"/>
+                                    <segment title="Not Three"/>
+                                    <segment title="Not Two"/>
+                                </segments>
+                                <connections>
+                                    <action selector="segmentControlValueChanged:" destination="zwp-Q9-SgX" eventType="editingChanged" id="X3W-er-Zey"/>
+                                </connections>
+                            </segmentedControl>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="irF-8W-hYU">
+                                <rect key="frame" x="0.0" y="536" width="600" height="64"/>
+                                <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="64" id="hM1-jT-pbP"/>
+                                </constraints>
+                                <state key="normal" title="Next">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="nextButtonPressed:" destination="zwp-Q9-SgX" eventType="touchUpInside" id="0Hn-zp-DMo"/>
+                                </connections>
+                            </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RLe-B4-X6F">
+                                <rect key="frame" x="16" y="208" width="568" height="288"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="irF-8W-hYU" firstAttribute="top" secondItem="RLe-B4-X6F" secondAttribute="bottom" constant="40" id="6Ec-rF-M5v"/>
+                            <constraint firstItem="b1l-ow-IbF" firstAttribute="top" secondItem="nKI-pf-o82" secondAttribute="bottom" constant="21" id="8Hc-CD-NfS"/>
+                            <constraint firstItem="irF-8W-hYU" firstAttribute="leading" secondItem="rbu-GU-Ld3" secondAttribute="leadingMargin" constant="-16" id="CMK-As-v34"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="irF-8W-hYU" secondAttribute="trailing" constant="-16" id="Dxx-qB-xln"/>
+                            <constraint firstItem="0cD-4K-oQF" firstAttribute="top" secondItem="irF-8W-hYU" secondAttribute="bottom" id="Ftq-ur-w1T"/>
+                            <constraint firstAttribute="centerX" secondItem="T6y-CZ-y9i" secondAttribute="centerX" id="OfS-eU-0fO"/>
+                            <constraint firstItem="T6y-CZ-y9i" firstAttribute="top" secondItem="mlD-jp-nIf" secondAttribute="bottom" constant="20" id="Q7F-jD-fup"/>
+                            <constraint firstItem="RLe-B4-X6F" firstAttribute="top" secondItem="b1l-ow-IbF" secondAttribute="bottom" constant="40" id="QRS-Xp-Z07"/>
+                            <constraint firstItem="RLe-B4-X6F" firstAttribute="trailing" secondItem="rbu-GU-Ld3" secondAttribute="trailingMargin" id="Qxn-Bq-yso"/>
+                            <constraint firstItem="nKI-pf-o82" firstAttribute="top" secondItem="T6y-CZ-y9i" secondAttribute="bottom" constant="23" id="W9f-MO-DmA"/>
+                            <constraint firstItem="RLe-B4-X6F" firstAttribute="leading" secondItem="rbu-GU-Ld3" secondAttribute="leadingMargin" id="jz9-WK-eHL"/>
+                            <constraint firstAttribute="centerX" secondItem="nKI-pf-o82" secondAttribute="centerX" id="qXm-NG-z5p"/>
+                            <constraint firstAttribute="centerX" secondItem="b1l-ow-IbF" secondAttribute="centerX" id="wFT-Rz-bsU"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="containerView" destination="RLe-B4-X6F" id="nhg-Wj-ScZ"/>
+                        <outlet property="gradesSegmentControl" destination="T6y-CZ-y9i" id="oet-Eu-ECf"/>
+                        <outlet property="notGradesSegmentControl" destination="b1l-ow-IbF" id="Rxf-QM-LS0"/>
+                        <outlet property="operatorSegmentControl" destination="nKI-pf-o82" id="Wvs-e0-kAa"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZUd-rf-3s4" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
