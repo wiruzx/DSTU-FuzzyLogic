@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		E60FF9E41AB9F3DE00088AD1 /* Other.swift in Sources */ = {isa = PBXBuildFile; fileRef = E60FF9DB1AB9E34600088AD1 /* Other.swift */; };
+		E60FF9E91ABA180300088AD1 /* QueryFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E60FF9E81ABA180300088AD1 /* QueryFunctions.swift */; };
 		E6326A361AB8D0A0002BEBF2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6326A351AB8D0A0002BEBF2 /* AppDelegate.swift */; };
 		E6326A381AB8D0A0002BEBF2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6326A371AB8D0A0002BEBF2 /* ViewController.swift */; };
 		E6326A3B1AB8D0A0002BEBF2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E6326A391AB8D0A0002BEBF2 /* Main.storyboard */; };
@@ -57,6 +58,7 @@
 
 /* Begin PBXFileReference section */
 		E60FF9DB1AB9E34600088AD1 /* Other.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Other.swift; sourceTree = "<group>"; };
+		E60FF9E81ABA180300088AD1 /* QueryFunctions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QueryFunctions.swift; sourceTree = "<group>"; };
 		E6326A301AB8D0A0002BEBF2 /* FuzzyLogic.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FuzzyLogic.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E6326A341AB8D0A0002BEBF2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E6326A351AB8D0A0002BEBF2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -207,6 +209,7 @@
 			children = (
 				E6326B6C1AB8DA69002BEBF2 /* Student.swift */,
 				E6326B691AB8DA41002BEBF2 /* StudentsManager.swift */,
+				E60FF9E81ABA180300088AD1 /* QueryFunctions.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -339,6 +342,7 @@
 				E6326A361AB8D0A0002BEBF2 /* AppDelegate.swift in Sources */,
 				E6326B6D1AB8DA69002BEBF2 /* Student.swift in Sources */,
 				E6326A5B1AB8D42A002BEBF2 /* UIColor+FSPalette.m in Sources */,
+				E60FF9E91ABA180300088AD1 /* QueryFunctions.swift in Sources */,
 				E6326A5A1AB8D42A002BEBF2 /* FSLineChart.m in Sources */,
 				E6326B6A1AB8DA41002BEBF2 /* StudentsManager.swift in Sources */,
 				E60FF9E41AB9F3DE00088AD1 /* Other.swift in Sources */,
