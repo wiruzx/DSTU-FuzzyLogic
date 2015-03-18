@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import PureFutures
 
 class StudentListViewController: UIViewController, UITableViewDataSource {
     
@@ -42,8 +43,10 @@ class StudentListViewController: UIViewController, UITableViewDataSource {
     
     @IBAction func didFinishEditing(sender: UITextField) {
         if let (name, points) = validateText(sender.text) {
-            addStudent(name, points: points)
-            sender.text = ""
+            addStudent(name, points: points).onComplete {
+                sender.text = ""
+                self.reloadStudents()
+            }
         } else {
             let alert = UIAlertController(title: "Invalid data", message: nil, preferredStyle: .Alert)
             alert.addAction(UIAlertAction(title: "Ok", style: .Cancel, handler: nil))
@@ -71,8 +74,8 @@ class StudentListViewController: UIViewController, UITableViewDataSource {
         studentsManager.getAllStudents().onComplete { self.students = $0 }
     }
     
-    private func addStudent(name: String, points: Double) {
-        studentsManager.addStudent(Student(name: name, points: points))
+    private func addStudent(name: String, points: Double) -> Deferred<Void> {
+        return studentsManager.addStudent(Student(name: name, points: points))
     }
     
     // MARK:- Table view data source

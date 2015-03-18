@@ -27,9 +27,10 @@ class StudentsManager {
     
     // MARK:- Public methods
     
-    func addStudent(student: Student) {
-        getAllStudentDictionaries().onComplete(dispatch_get_main_queue()) { dicts in
+    func addStudent(student: Student) -> Deferred<Void> {
+        return getAllStudentDictionaries().map { dicts in
             self.userDefaults.setObject(dicts + [student.encode()], forKey: "students")
+            self.userDefaults.synchronize()
         }
     }
     
