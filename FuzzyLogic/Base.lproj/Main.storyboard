@@ -12,7 +12,7 @@
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="53" sectionHeaderHeight="10" sectionFooterHeight="10" id="UkJ-s1-EkT">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                        <color key="backgroundColor" red="0.93725490196078431" green="0.93725490196078431" blue="0.95686274509803926" alpha="1" colorSpace="calibratedRGB"/>
                         <sections/>
                         <connections>
                             <outlet property="dataSource" destination="a8E-9k-4KX" id="uSQ-Q8-pul"/>
@@ -57,19 +57,33 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="s6v-J7-gJF">
-                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <rect key="frame" x="0.0" y="30" width="600" height="570"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <connections>
                                     <outlet property="dataSource" destination="LyL-Rf-zbf" id="Il8-FG-7tW"/>
                                 </connections>
                             </tableView>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="myA-mK-PrE">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="cqJ-tG-AuD"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="didFinishEditing:" destination="LyL-Rf-zbf" eventType="editingDidEndOnExit" id="yr9-0i-IKp"/>
+                                </connections>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="myA-mK-PrE" secondAttribute="trailing" constant="-16" id="7lM-rl-yvO"/>
+                            <constraint firstItem="myA-mK-PrE" firstAttribute="top" secondItem="ZA2-hj-qVd" secondAttribute="topMargin" id="REz-r0-XAx"/>
                             <constraint firstItem="Mv2-BP-j0q" firstAttribute="top" secondItem="s6v-J7-gJF" secondAttribute="bottom" id="bz7-3T-8Kx"/>
-                            <constraint firstItem="s6v-J7-gJF" firstAttribute="top" secondItem="ZA2-hj-qVd" secondAttribute="topMargin" id="eZO-ZB-F73"/>
                             <constraint firstItem="s6v-J7-gJF" firstAttribute="leading" secondItem="ZA2-hj-qVd" secondAttribute="leadingMargin" constant="-16" id="hpY-H5-QPw"/>
+                            <constraint firstItem="myA-mK-PrE" firstAttribute="leading" secondItem="ZA2-hj-qVd" secondAttribute="leadingMargin" constant="-16" id="izD-PM-Pix"/>
                             <constraint firstAttribute="trailingMargin" secondItem="s6v-J7-gJF" secondAttribute="trailing" constant="-16" id="wgr-N2-1sR"/>
+                            <constraint firstItem="s6v-J7-gJF" firstAttribute="top" secondItem="myA-mK-PrE" secondAttribute="bottom" id="zpz-cd-k2u"/>
                         </constraints>
                     </view>
                     <connections>

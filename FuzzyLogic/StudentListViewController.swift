@@ -35,9 +35,37 @@ class StudentListViewController: UIViewController, UITableViewDataSource {
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
         
+        reloadStudents()
+    }
+    
+    // MARK:- Actions
+    
+    @IBAction func didFinishEditing(sender: UITextField) {
+        if let (name, points) = validateText(sender.text) {
+            addStudent(name, points: points)
+            sender.text = ""
+        } else {
+            let alert = UIAlertController(title: "Invalid data", message: nil, preferredStyle: .Alert)
+            alert.addAction(UIAlertAction(title: "Ok", style: .Cancel, handler: nil))
+            presentViewController(alert, animated: true, completion: nil)
+        }
     }
     
     // MARK:- Private methods
+    
+    private func validateText(text: String) -> (name: String, points: Double)? {
+        
+        let splitted = split(text) { $0 == " " }
+        
+        if splitted.count < 2 {
+            return nil
+        }
+        
+        let first = dropLast(splitted)
+        let last: NSString = splitted.last!
+        
+        return (first.reduce("", combine: +), last.doubleValue)
+    }
     
     private func reloadStudents() {
         studentManager
