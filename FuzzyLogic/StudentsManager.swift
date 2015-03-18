@@ -12,10 +12,10 @@ import struct PureFutures.PurePromise
 
 class StudentsManager {
     
-    private let database: YapDatabase
+    let userDefaults: NSUserDefaults
     
-    init(database: YapDatabase) {
-        self.database = database
+    init(userDefaults: NSUserDefaults) {
+        self.userDefaults = userDefaults
     }
     
     func addStudent(student: Student) {

@@ -8,4 +8,3 @@
 
 #import "FSLineChart.h"
 #import "UIColor+FSPalette.h"
-#import "YapDatabase.h"
