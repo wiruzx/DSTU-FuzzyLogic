@@ -36,6 +36,8 @@ class StudentListViewController: UIViewController, UITableViewDataSource {
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
         
+        tableView.contentInset = UIEdgeInsetsMake(-64, 0, 0, 0)
+        
         reloadStudents()
     }
     

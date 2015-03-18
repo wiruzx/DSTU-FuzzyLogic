@@ -75,7 +75,7 @@ class MasterTableViewController: UITableViewController {
             let studentListViewController = storyboard?.instantiateViewControllerWithIdentifier("StudentListViewController") as StudentListViewController
             studentListViewController.studentsManager = studentsManager
             
-            splitViewController?.showDetailViewController(studentListViewController, sender: nil)
+            splitViewController?.showDetailViewController(UINavigationController(rootViewController: studentListViewController), sender: nil)
             
         case .Some(.Request):
             break

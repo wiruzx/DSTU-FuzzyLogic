@@ -86,6 +86,7 @@
                             <constraint firstItem="s6v-J7-gJF" firstAttribute="top" secondItem="myA-mK-PrE" secondAttribute="bottom" id="zpz-cd-k2u"/>
                         </constraints>
                     </view>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                     <connections>
                         <outlet property="tableView" destination="s6v-J7-gJF" id="ZW6-FV-ZrU"/>
                     </connections>
