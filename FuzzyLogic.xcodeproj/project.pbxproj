@@ -23,6 +23,7 @@
 		E6326B6F1AB8DFF4002BEBF2 /* MasterTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6326B6E1AB8DFF4002BEBF2 /* MasterTableViewController.swift */; };
 		E6326B711AB8E26A002BEBF2 /* StudentListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6326B701AB8E26A002BEBF2 /* StudentListViewController.swift */; };
 		E6E36F811ABB7EEC001D78FC /* ReadOnlyStudentListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6E36F801ABB7EEC001D78FC /* ReadOnlyStudentListViewController.swift */; };
+		E6E36F831ABB804B001D78FC /* PureFutures.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = E6326B5E1AB8D8E7002BEBF2 /* PureFutures.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		E6FCD0CB1ABB60EE000BEF7C /* LineChart.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6FCD0CA1ABB60EE000BEF7C /* LineChart.swift */; };
 /* End PBXBuildFile section */
 
@@ -56,6 +57,19 @@
 			remoteInfo = PureFutures;
 		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		E6E36F821ABB8041001D78FC /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				E6E36F831ABB804B001D78FC /* PureFutures.framework in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		E60FF9DB1AB9E34600088AD1 /* Other.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Other.swift; sourceTree = "<group>"; };
@@ -222,6 +236,7 @@
 				E6326A2C1AB8D0A0002BEBF2 /* Sources */,
 				E6326A2D1AB8D0A0002BEBF2 /* Frameworks */,
 				E6326A2E1AB8D0A0002BEBF2 /* Resources */,
+				E6E36F821ABB8041001D78FC /* CopyFiles */,
 			);
 			buildRules = (
 			);
