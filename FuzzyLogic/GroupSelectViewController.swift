@@ -69,8 +69,11 @@ class GroupSelectViewController: UIViewController {
     }
     
     private func updateGraph(grade: Grade, notGrade: Grade, op: Operator) {
+        
+        let staticLine = Array(count: 11, repeatedValue: CGFloat(0.8))
+        
         let gradeFunction = functionFromGrade(grade)
-        let notGradeFunction = { self.functionFromGrade(notGrade)($0) * -1 }
+        let notGradeFunction = { 1 - self.functionFromGrade(notGrade)($0) }
         
         let line = Array(0...10).map { Double($0 * 10) }
         
@@ -81,6 +84,7 @@ class GroupSelectViewController: UIViewController {
         
         chartView.addLine(firstLine)
         chartView.addLine(secondLine)
+        chartView.addLine(staticLine)
         
     }
     
@@ -114,6 +118,7 @@ class GroupSelectViewController: UIViewController {
     
     private func configureLineChartView() {
         
+        chartView.area = false
         chartView.x.grid.count = 11
         chartView.y.grid.count = 6
         chartView.x.labels.values = Array(0...10).map { "\($0 * 10)" }
