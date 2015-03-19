@@ -14,6 +14,8 @@ private let horizontalScale = 100.0 / Double(numberOfHorizontalTicks)
 private let numberOfVerticalTicks: Int32 = 6
 private let numberOfHorizontalTicks: Int32 = 10
 
+private let MinValue = 0.8
+
 class GroupSelectViewController: UIViewController {
     
     // MARK:- Type declarations
@@ -56,6 +58,32 @@ class GroupSelectViewController: UIViewController {
     }
     
     @IBAction private func nextButtonPressed(sender: AnyObject) {
+        
+        let (grade, notGrade, op) = segmentValues()
+        
+        let gradeF = functionFromGrade(grade)
+        let notGradeF = { 1 - self.functionFromGrade(notGrade)($0) }
+        
+        let predicate: Double -> Bool = { value in
+            
+            let first = gradeF(value) >= MinValue
+            let second = { notGradeF(value) >= MinValue }
+            
+            switch op {
+            case .Or:
+                return first || second()
+            case .And:
+                return first && second()
+            }
+        }
+        
+        let studentListViewController = storyboard?.instantiateViewControllerWithIdentifier("ReadOnlyStudentListViewController") as! ReadOnlyStudentListViewController
+        
+        studentsManager
+            .getStudents { predicate($0.points) }
+            .onComplete { studentListViewController.students = $0 }
+        
+        navigationController?.pushViewController(studentListViewController, animated: true)
     }
     
     // MARK:- Private methods
@@ -68,7 +96,7 @@ class GroupSelectViewController: UIViewController {
     
     private func updateGraph(grade: Grade, notGrade: Grade, op: Operator) {
         
-        let staticLine = Array(count: 11, repeatedValue: CGFloat(0.8))
+        let staticLine = Array(count: 11, repeatedValue: CGFloat(MinValue))
         
         let gradeFunction = functionFromGrade(grade)
         let notGradeFunction = { 1 - self.functionFromGrade(notGrade)($0) }

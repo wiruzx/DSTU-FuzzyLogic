@@ -200,6 +200,24 @@
             </objects>
             <point key="canvasLocation" x="2268" y="1651"/>
         </scene>
+        <!--Read Only Student List View Controller-->
+        <scene sceneID="Jo5-ak-kex">
+            <objects>
+                <tableViewController storyboardIdentifier="ReadOnlyStudentListViewController" id="eOJ-bk-nAy" customClass="ReadOnlyStudentListViewController" customModule="FuzzyLogic" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" allowsSelection="NO" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="PfA-7M-kF6">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <connections>
+                            <outlet property="dataSource" destination="eOJ-bk-nAy" id="jVr-b0-4cq"/>
+                            <outlet property="delegate" destination="eOJ-bk-nAy" id="frH-v9-UfA"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="uza-td-rZj" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3001" y="1651"/>
+        </scene>
         <!--Navigation Controller-->
         <scene sceneID="qvO-Xh-4id">
             <objects>

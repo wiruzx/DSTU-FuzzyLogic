@@ -22,6 +22,7 @@
 		E6326B6D1AB8DA69002BEBF2 /* Student.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6326B6C1AB8DA69002BEBF2 /* Student.swift */; };
 		E6326B6F1AB8DFF4002BEBF2 /* MasterTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6326B6E1AB8DFF4002BEBF2 /* MasterTableViewController.swift */; };
 		E6326B711AB8E26A002BEBF2 /* StudentListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6326B701AB8E26A002BEBF2 /* StudentListViewController.swift */; };
+		E6E36F811ABB7EEC001D78FC /* ReadOnlyStudentListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6E36F801ABB7EEC001D78FC /* ReadOnlyStudentListViewController.swift */; };
 		E6FCD0CB1ABB60EE000BEF7C /* LineChart.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6FCD0CA1ABB60EE000BEF7C /* LineChart.swift */; };
 /* End PBXBuildFile section */
 
@@ -77,6 +78,7 @@
 		E6326B6C1AB8DA69002BEBF2 /* Student.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Student.swift; sourceTree = "<group>"; };
 		E6326B6E1AB8DFF4002BEBF2 /* MasterTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MasterTableViewController.swift; sourceTree = "<group>"; };
 		E6326B701AB8E26A002BEBF2 /* StudentListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StudentListViewController.swift; sourceTree = "<group>"; };
+		E6E36F801ABB7EEC001D78FC /* ReadOnlyStudentListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReadOnlyStudentListViewController.swift; sourceTree = "<group>"; };
 		E6FCD0CA1ABB60EE000BEF7C /* LineChart.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LineChart.swift; path = "submodules/swift-linechart/linechart/linechart/LineChart.swift"; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
@@ -127,6 +129,7 @@
 				E6326B6E1AB8DFF4002BEBF2 /* MasterTableViewController.swift */,
 				E6326B701AB8E26A002BEBF2 /* StudentListViewController.swift */,
 				E60FF9EA1ABA1B5100088AD1 /* GroupSelectViewController.swift */,
+				E6E36F801ABB7EEC001D78FC /* ReadOnlyStudentListViewController.swift */,
 				E60FF9DB1AB9E34600088AD1 /* Other.swift */,
 				E6326B6B1AB8DA5B002BEBF2 /* Model */,
 				E6326A391AB8D0A0002BEBF2 /* Main.storyboard */,
@@ -338,6 +341,7 @@
 				E6326B6D1AB8DA69002BEBF2 /* Student.swift in Sources */,
 				E60FF9EB1ABA1B5100088AD1 /* GroupSelectViewController.swift in Sources */,
 				E6FCD0CB1ABB60EE000BEF7C /* LineChart.swift in Sources */,
+				E6E36F811ABB7EEC001D78FC /* ReadOnlyStudentListViewController.swift in Sources */,
 				E60FF9E91ABA180300088AD1 /* QueryFunctions.swift in Sources */,
 				E6326B6A1AB8DA41002BEBF2 /* StudentsManager.swift in Sources */,
 				E60FF9E41AB9F3DE00088AD1 /* Other.swift in Sources */,
