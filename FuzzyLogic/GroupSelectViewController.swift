@@ -39,19 +39,14 @@ class GroupSelectViewController: UIViewController {
     @IBOutlet private weak var gradesSegmentControl: UISegmentedControl!
     @IBOutlet private weak var operatorSegmentControl: UISegmentedControl!
     @IBOutlet private weak var notGradesSegmentControl: UISegmentedControl!
-    @IBOutlet private weak var containerView: UIView!
+    @IBOutlet private weak var chartView: LineChart!
     
     // MARK:- View controller's overridings
     
-    
-    override func viewDidLayoutSubviews() {
-        super.viewDidLayoutSubviews()
-        
-        dispatch_once(&onceToken) {
-            
-            let containerSize = self.containerView.frame.size
-            
-        }
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        configureLineChartView()
+        updateGraphForCurrentState()
     }
     
     // MARK:- Actions
@@ -74,10 +69,55 @@ class GroupSelectViewController: UIViewController {
     }
     
     private func updateGraph(grade: Grade, notGrade: Grade, op: Operator) {
+        let gradeFunction = functionFromGrade(grade)
+        let notGradeFunction = { self.functionFromGrade(notGrade)($0) * -1 }
+        
+        let line = Array(0...10).map { Double($0 * 10) }
+        
+        let firstLine = line.map(gradeFunction).map(toCGFloat)
+        let secondLine = line.map(notGradeFunction).map(toCGFloat)
+        
+        chartView.clearAll()
+        
+        chartView.addLine(firstLine)
+        chartView.addLine(secondLine)
         
     }
     
+    private func functionFromGrade(grade: Grade) -> Double -> Double {
+        
+        let f: Double -> Double
+        
+        switch grade {
+        case .Five:
+            f = five
+        case .Four:
+            f = four
+        case .Three:
+            f = three
+        case .Two:
+            f = two
+        }
+        
+        return constrain(f)
+    }
+    
     // MARK:- Helper methods
+    
+    private func constrain(f: Double -> Double)(value: Double) -> Double {
+        return min(max(0, f(value)), 1)
+    }
+    
+    private func toCGFloat(doubleValue: Double) -> CGFloat {
+        return CGFloat(doubleValue)
+    }
+    
+    private func configureLineChartView() {
+        
+        chartView.x.grid.count = 11
+        chartView.y.grid.count = 6
+        chartView.x.labels.values = Array(0...10).map { "\($0 * 10)" }
+    }
     
     private func operatorFromSegment(segment: UISegmentedControl) -> Operator? {
         return segment.numberOfSegments == 2 ? Operator(rawValue: segment.selectedSegmentIndex) : nil

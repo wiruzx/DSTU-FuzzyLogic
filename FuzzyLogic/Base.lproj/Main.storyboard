@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6751" systemVersion="14D98g" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="3l0-G5-lQC">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7515.2" systemVersion="14D98g" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="3l0-G5-lQC">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6736"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7512"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
@@ -120,7 +120,7 @@
                                     <segment title="Two"/>
                                 </segments>
                                 <connections>
-                                    <action selector="segmentControlValueChanged:" destination="zwp-Q9-SgX" eventType="editingChanged" id="3WU-bX-FRd"/>
+                                    <action selector="segmentControlValueChanged:" destination="zwp-Q9-SgX" eventType="valueChanged" id="nRN-5W-qF3"/>
                                 </connections>
                             </segmentedControl>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="nKI-pf-o82">
@@ -134,7 +134,7 @@
                                     <segment title="And"/>
                                 </segments>
                                 <connections>
-                                    <action selector="segmentControlValueChanged:" destination="zwp-Q9-SgX" eventType="editingChanged" id="g3d-Kh-VKx"/>
+                                    <action selector="segmentControlValueChanged:" destination="zwp-Q9-SgX" eventType="valueChanged" id="zhJ-hJ-6gT"/>
                                 </connections>
                             </segmentedControl>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="b1l-ow-IbF">
@@ -150,7 +150,7 @@
                                     <segment title="Not Two"/>
                                 </segments>
                                 <connections>
-                                    <action selector="segmentControlValueChanged:" destination="zwp-Q9-SgX" eventType="editingChanged" id="X3W-er-Zey"/>
+                                    <action selector="segmentControlValueChanged:" destination="zwp-Q9-SgX" eventType="valueChanged" id="DWR-IV-nQt"/>
                                 </connections>
                             </segmentedControl>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="irF-8W-hYU">
@@ -167,9 +167,9 @@
                                     <action selector="nextButtonPressed:" destination="zwp-Q9-SgX" eventType="touchUpInside" id="0Hn-zp-DMo"/>
                                 </connections>
                             </button>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RLe-B4-X6F">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RLe-B4-X6F" customClass="LineChart" customModule="FuzzyLogic" customModuleProvider="target">
                                 <rect key="frame" x="16" y="208" width="568" height="288"/>
-                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -190,7 +190,7 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="containerView" destination="RLe-B4-X6F" id="nhg-Wj-ScZ"/>
+                        <outlet property="chartView" destination="RLe-B4-X6F" id="D5R-64-gG3"/>
                         <outlet property="gradesSegmentControl" destination="T6y-CZ-y9i" id="oet-Eu-ECf"/>
                         <outlet property="notGradesSegmentControl" destination="b1l-ow-IbF" id="Rxf-QM-LS0"/>
                         <outlet property="operatorSegmentControl" destination="nKI-pf-o82" id="Wvs-e0-kAa"/>
