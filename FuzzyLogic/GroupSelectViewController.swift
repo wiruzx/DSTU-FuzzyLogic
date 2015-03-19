@@ -61,9 +61,7 @@ class GroupSelectViewController: UIViewController {
     // MARK:- Private methods
     
     private func updateGraphForCurrentState() {
-        let grade = gradeFromSegment(gradesSegmentControl) ?? .Five
-        let notGrade = gradeFromSegment(notGradesSegmentControl) ?? .Five
-        let op = operatorFromSegment(operatorSegmentControl) ?? .Or
+        let (grade, notGrade, op) = segmentValues()
         
         updateGraph(grade, notGrade: notGrade, op: op)
     }
@@ -107,6 +105,14 @@ class GroupSelectViewController: UIViewController {
     }
     
     // MARK:- Helper methods
+    
+    private func segmentValues() -> (grade: Grade, notGrade: Grade, op: Operator) {
+        let grade = gradeFromSegment(gradesSegmentControl) ?? .Five
+        let notGrade = gradeFromSegment(notGradesSegmentControl) ?? .Five
+        let op = operatorFromSegment(operatorSegmentControl) ?? .Or
+        
+        return (grade, notGrade, op)
+    }
     
     private func constrain(f: Double -> Double)(value: Double) -> Double {
         return min(max(0, f(value)), 1)
