@@ -60,7 +60,7 @@ class StudentListViewController: UIViewController, UITableViewDataSource {
     
     private func validateText(text: String) -> (name: String, points: Double)? {
         
-        let splitted = split(text) { $0 == " " }
+        let splitted = split(text, { $0 == " " })
         
         if splitted.count < 2 {
             return nil
@@ -91,7 +91,7 @@ class StudentListViewController: UIViewController, UITableViewDataSource {
         
         let CellIdentifier = "Cell"
         
-        let cell = tableView.dequeueReusableCellWithIdentifier(CellIdentifier) as? UITableViewCell ?? UITableViewCell(style: .Default, reuseIdentifier: CellIdentifier)
+        let cell = (tableView.dequeueReusableCellWithIdentifier(CellIdentifier) as? UITableViewCell) ?? UITableViewCell(style: .Default, reuseIdentifier: CellIdentifier)
         
         
         let student = students[indexPath.row]

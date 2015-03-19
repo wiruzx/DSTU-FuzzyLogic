@@ -49,7 +49,7 @@ class MasterTableViewController: UITableViewController {
         
         let CellIdentifier = "Cell"
         
-        let cell = tableView.dequeueReusableCellWithIdentifier(CellIdentifier) as? UITableViewCell ?? UITableViewCell(style: .Default, reuseIdentifier: CellIdentifier)
+        let cell = (tableView.dequeueReusableCellWithIdentifier(CellIdentifier) as? UITableViewCell) ?? UITableViewCell(style: .Default, reuseIdentifier: CellIdentifier)
         
         switch Row(fromIndexPath: indexPath) {
             
@@ -72,14 +72,14 @@ class MasterTableViewController: UITableViewController {
         switch Row(fromIndexPath: indexPath) {
         case .Some(.List):
             
-            let studentListViewController = storyboard?.instantiateViewControllerWithIdentifier("StudentListViewController") as StudentListViewController
+            let studentListViewController = storyboard?.instantiateViewControllerWithIdentifier("StudentListViewController") as! StudentListViewController
             studentListViewController.studentsManager = studentsManager
             
             splitViewController?.showDetailViewController(UINavigationController(rootViewController: studentListViewController), sender: nil)
             
         case .Some(.Request):
             
-            let groupSelectViewController = storyboard?.instantiateViewControllerWithIdentifier("GroupSelectViewController") as GroupSelectViewController
+            let groupSelectViewController = storyboard?.instantiateViewControllerWithIdentifier("GroupSelectViewController") as! GroupSelectViewController
             groupSelectViewController.studentsManager = studentsManager
             splitViewController?.showDetailViewController(UINavigationController(rootViewController: groupSelectViewController), sender: nil)
             

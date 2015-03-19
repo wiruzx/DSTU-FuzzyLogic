@@ -51,17 +51,6 @@ class GroupSelectViewController: UIViewController {
             
             let containerSize = self.containerView.frame.size
             
-            let chartView = FSLineChart(frame: CGRectMake(0, 0, containerSize.width, containerSize.height))
-            chartView.horizontalGridStep = numberOfHorizontalTicks
-            chartView.verticalGridStep = numberOfVerticalTicks
-            chartView.labelForIndex = { "\(Double($0) * horizontalScale)" }
-            chartView.labelForValue = { "\(Double($0) * verticalScale)" }
-            
-            self.containerView.addSubview(chartView)
-            
-            let values = []
-            
-            chartView.setChartData(values)
         }
     }
     

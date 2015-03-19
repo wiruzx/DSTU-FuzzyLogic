@@ -53,7 +53,7 @@ class StudentsManager {
     // MARK:- Private methods
     
     private func getAllStudentDictionaries() -> Deferred<[StudentDict]> {
-        return deferred { self.userDefaults.objectForKey("students") as? [StudentDict] ?? [] }
+        return deferred { (self.userDefaults.objectForKey("students") as? [StudentDict]) ?? [] }
     }
     
 }

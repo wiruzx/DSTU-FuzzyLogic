@@ -6,5 +6,3 @@
 //  Copyright (c) 2015 Victor Shamanov. All rights reserved.
 //
 
-#import "FSLineChart.h"
-#import "UIColor+FSPalette.h"
