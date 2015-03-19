@@ -2,4 +2,4 @@
 A lab work on fuzzy logic
 
 ##Usage
-**Don't**
+Don't
