@@ -1,6 +1,6 @@
-[submodule "submodules/FSLineChart"]
-	path = submodules/FSLineChart
-	url = https://github.com/ArthurGuibert/FSLineChart.git
 [submodule "submodules/PureFutures"]
 	path = submodules/PureFutures
 	url = https://github.com/wiruzx/PureFutures.git
+[submodule "submodules/swift-linechart"]
+	path = submodules/swift-linechart
+	url = https://github.com/zemirco/swift-linechart.git

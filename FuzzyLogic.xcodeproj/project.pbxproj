@@ -16,14 +16,13 @@
 		E6326A3D1AB8D0A0002BEBF2 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E6326A3C1AB8D0A0002BEBF2 /* Images.xcassets */; };
 		E6326A401AB8D0A0002BEBF2 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = E6326A3E1AB8D0A0002BEBF2 /* LaunchScreen.xib */; };
 		E6326A4C1AB8D0A0002BEBF2 /* FuzzyLogicTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6326A4B1AB8D0A0002BEBF2 /* FuzzyLogicTests.swift */; };
-		E6326A5A1AB8D42A002BEBF2 /* FSLineChart.m in Sources */ = {isa = PBXBuildFile; fileRef = E6326A571AB8D42A002BEBF2 /* FSLineChart.m */; };
-		E6326A5B1AB8D42A002BEBF2 /* UIColor+FSPalette.m in Sources */ = {isa = PBXBuildFile; fileRef = E6326A591AB8D42A002BEBF2 /* UIColor+FSPalette.m */; };
 		E6326B561AB8D870002BEBF2 /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = E6326B551AB8D870002BEBF2 /* libsqlite3.dylib */; };
 		E6326B631AB8D8F6002BEBF2 /* PureFutures.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E6326B5E1AB8D8E7002BEBF2 /* PureFutures.framework */; };
 		E6326B6A1AB8DA41002BEBF2 /* StudentsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6326B691AB8DA41002BEBF2 /* StudentsManager.swift */; };
 		E6326B6D1AB8DA69002BEBF2 /* Student.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6326B6C1AB8DA69002BEBF2 /* Student.swift */; };
 		E6326B6F1AB8DFF4002BEBF2 /* MasterTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6326B6E1AB8DFF4002BEBF2 /* MasterTableViewController.swift */; };
 		E6326B711AB8E26A002BEBF2 /* StudentListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6326B701AB8E26A002BEBF2 /* StudentListViewController.swift */; };
+		E6FCD0CB1ABB60EE000BEF7C /* LineChart.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6FCD0CA1ABB60EE000BEF7C /* LineChart.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -71,10 +70,6 @@
 		E6326A451AB8D0A0002BEBF2 /* FuzzyLogicTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FuzzyLogicTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E6326A4A1AB8D0A0002BEBF2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E6326A4B1AB8D0A0002BEBF2 /* FuzzyLogicTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FuzzyLogicTests.swift; sourceTree = "<group>"; };
-		E6326A561AB8D42A002BEBF2 /* FSLineChart.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSLineChart.h; sourceTree = "<group>"; };
-		E6326A571AB8D42A002BEBF2 /* FSLineChart.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FSLineChart.m; sourceTree = "<group>"; };
-		E6326A581AB8D42A002BEBF2 /* UIColor+FSPalette.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+FSPalette.h"; sourceTree = "<group>"; };
-		E6326A591AB8D42A002BEBF2 /* UIColor+FSPalette.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+FSPalette.m"; sourceTree = "<group>"; };
 		E6326B551AB8D870002BEBF2 /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
 		E6326B581AB8D8E7002BEBF2 /* PureFutures.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = PureFutures.xcodeproj; path = submodules/PureFutures/PureFutures.xcodeproj; sourceTree = SOURCE_ROOT; };
 		E6326B671AB8D94E002BEBF2 /* FuzzyLogic-BridgingHeader.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.objc; path = "FuzzyLogic-BridgingHeader.h"; sourceTree = "<group>"; };
@@ -82,6 +77,7 @@
 		E6326B6C1AB8DA69002BEBF2 /* Student.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Student.swift; sourceTree = "<group>"; };
 		E6326B6E1AB8DFF4002BEBF2 /* MasterTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MasterTableViewController.swift; sourceTree = "<group>"; };
 		E6326B701AB8E26A002BEBF2 /* StudentListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StudentListViewController.swift; sourceTree = "<group>"; };
+		E6FCD0CA1ABB60EE000BEF7C /* LineChart.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LineChart.swift; path = "submodules/swift-linechart/linechart/linechart/LineChart.swift"; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -168,23 +164,11 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		E6326A551AB8D42A002BEBF2 /* FSLineChart */ = {
-			isa = PBXGroup;
-			children = (
-				E6326A561AB8D42A002BEBF2 /* FSLineChart.h */,
-				E6326A571AB8D42A002BEBF2 /* FSLineChart.m */,
-				E6326A581AB8D42A002BEBF2 /* UIColor+FSPalette.h */,
-				E6326A591AB8D42A002BEBF2 /* UIColor+FSPalette.m */,
-			);
-			name = FSLineChart;
-			path = submodules/FSLineChart/FSLineChart/FSLineChart;
-			sourceTree = SOURCE_ROOT;
-		};
 		E6326A5C1AB8D42E002BEBF2 /* External */ = {
 			isa = PBXGroup;
 			children = (
+				E6FCD0C91ABB60DD000BEF7C /* swift-linechart */,
 				E6326B581AB8D8E7002BEBF2 /* PureFutures.xcodeproj */,
-				E6326A551AB8D42A002BEBF2 /* FSLineChart */,
 			);
 			name = External;
 			sourceTree = "<group>";
@@ -215,6 +199,14 @@
 				E60FF9E81ABA180300088AD1 /* QueryFunctions.swift */,
 			);
 			name = Model;
+			sourceTree = "<group>";
+		};
+		E6FCD0C91ABB60DD000BEF7C /* swift-linechart */ = {
+			isa = PBXGroup;
+			children = (
+				E6FCD0CA1ABB60EE000BEF7C /* LineChart.swift */,
+			);
+			name = "swift-linechart";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -345,9 +337,8 @@
 				E6326A361AB8D0A0002BEBF2 /* AppDelegate.swift in Sources */,
 				E6326B6D1AB8DA69002BEBF2 /* Student.swift in Sources */,
 				E60FF9EB1ABA1B5100088AD1 /* GroupSelectViewController.swift in Sources */,
-				E6326A5B1AB8D42A002BEBF2 /* UIColor+FSPalette.m in Sources */,
+				E6FCD0CB1ABB60EE000BEF7C /* LineChart.swift in Sources */,
 				E60FF9E91ABA180300088AD1 /* QueryFunctions.swift in Sources */,
-				E6326A5A1AB8D42A002BEBF2 /* FSLineChart.m in Sources */,
 				E6326B6A1AB8DA41002BEBF2 /* StudentsManager.swift in Sources */,
 				E60FF9E41AB9F3DE00088AD1 /* Other.swift in Sources */,
 				E6326B711AB8E26A002BEBF2 /* StudentListViewController.swift in Sources */,
