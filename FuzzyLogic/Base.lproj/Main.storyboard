@@ -44,10 +44,10 @@
             </objects>
             <point key="canvasLocation" x="1495" y="790"/>
         </scene>
-        <!--Student List View Controller-->
+        <!--Students-->
         <scene sceneID="BSk-Vr-LSw">
             <objects>
-                <viewController storyboardIdentifier="StudentListViewController" id="LyL-Rf-zbf" customClass="StudentListViewController" customModule="FuzzyLogic" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="StudentListViewController" title="Students" id="LyL-Rf-zbf" customClass="StudentListViewController" customModule="FuzzyLogic" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="bo1-d2-Z1y"/>
                         <viewControllerLayoutGuide type="bottom" id="Mv2-BP-j0q"/>
@@ -69,7 +69,7 @@
                                     <constraint firstAttribute="height" constant="30" id="cqJ-tG-AuD"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences" returnKeyType="done"/>
                                 <connections>
                                     <action selector="didFinishEditing:" destination="LyL-Rf-zbf" eventType="editingDidEndOnExit" id="yr9-0i-IKp"/>
                                 </connections>
@@ -95,10 +95,10 @@
             </objects>
             <point key="canvasLocation" x="1495" y="1651"/>
         </scene>
-        <!--Group Select View Controller-->
+        <!--Filter-->
         <scene sceneID="hJv-ur-JG5">
             <objects>
-                <viewController storyboardIdentifier="GroupSelectViewController" id="zwp-Q9-SgX" customClass="GroupSelectViewController" customModule="FuzzyLogic" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="GroupSelectViewController" title="Filter" id="zwp-Q9-SgX" customClass="GroupSelectViewController" customModule="FuzzyLogic" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="mlD-jp-nIf"/>
                         <viewControllerLayoutGuide type="bottom" id="0cD-4K-oQF"/>
@@ -159,7 +159,7 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="64" id="hM1-jT-pbP"/>
                                 </constraints>
-                                <state key="normal" title="Next">
+                                <state key="normal" title="Filter">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -200,10 +200,10 @@
             </objects>
             <point key="canvasLocation" x="2268" y="1651"/>
         </scene>
-        <!--Read Only Student List View Controller-->
+        <!--Result-->
         <scene sceneID="Jo5-ak-kex">
             <objects>
-                <tableViewController storyboardIdentifier="ReadOnlyStudentListViewController" id="eOJ-bk-nAy" customClass="ReadOnlyStudentListViewController" customModule="FuzzyLogic" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="ReadOnlyStudentListViewController" title="Result" id="eOJ-bk-nAy" customClass="ReadOnlyStudentListViewController" customModule="FuzzyLogic" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" allowsSelection="NO" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="PfA-7M-kF6">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
