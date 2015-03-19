@@ -3,4 +3,4 @@
 	url = https://github.com/wiruzx/PureFutures.git
 [submodule "submodules/swift-linechart"]
 	path = submodules/swift-linechart
-	url = https://github.com/zemirco/swift-linechart.git
+	url = https://github.com/wiruzx/swift-linechart.git
