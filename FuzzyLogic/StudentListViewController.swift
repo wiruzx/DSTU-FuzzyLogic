@@ -69,7 +69,7 @@ class StudentListViewController: UIViewController, UITableViewDataSource {
         let first = dropLast(splitted)
         let last: NSString = splitted.last!
         
-        return (first.reduce("", combine: +), last.doubleValue)
+        return (first.reduce("") { $0 + " " + $1 }, last.doubleValue)
     }
     
     private func reloadStudents() {
